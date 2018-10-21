@@ -74,46 +74,47 @@ public class Questions extends AppCompatActivity {
         Capitals = new capitals(this);
         Capitals.createDatabase();
         Capitals.openDatabase();
+        Capitals.getWritableDatabase();
 
         Computer = new computer(this);
         Computer.createDatabase();
         Computer.openDatabase();
-
+        Computer.getWritableDatabase();
 
         Currency = new currency(this);
         Currency.createDatabase();
         Currency.openDatabase();
-        //Currency.getWritableDatabase();
+        Currency.getWritableDatabase();
 
         English = new english(this);
         English.createDatabase();
         English.openDatabase();
-        //English.getWritableDatabase();
+        English.getWritableDatabase();
 
         General = new general(this);
         General.createDatabase();
         General.openDatabase();
-        //General.getWritableDatabase();
+        General.getWritableDatabase();
 
         Inventions = new inventions(this);
         Inventions.createDatabase();
         Inventions.openDatabase();
-       // Inventions.getWritableDatabase();
+        Inventions.getWritableDatabase();
 
         Maths = new maths(this);
         Maths.createDatabase();
         Maths.openDatabase();
-      //  Maths.getWritableDatabase();
+        Maths.getWritableDatabase();
 
         Science = new science(this);
         Science.createDatabase();
         Science.openDatabase();
-        //Science.getWritableDatabase();
+        Science.getWritableDatabase();
 
         Sports = new sports(this);
         Sports.createDatabase();
         Sports.openDatabase();
-        //Sports.getWritableDatabase();
+        Sports.getWritableDatabase();
 
         //Till here we are linking the database file
         OptA = (Button) findViewById(R.id.OptionA);
@@ -225,7 +226,8 @@ public class Questions extends AppCompatActivity {
                 }
             }
         }
-        if (get.equals("c1")) {
+        if (get.equals("c1"))
+        {
 
             if (c1 == 0) {
                 for (i = 1; i < 90; i++) {
@@ -234,30 +236,59 @@ public class Questions extends AppCompatActivity {
                 Collections.shuffle(list);
                 c1=1;
             }
-            Ques = Computer.readQuestion(list.get(j));
-            Opta = Computer.readOptionA(list.get(j));
-            Optb = Computer.readOptionB(list.get(j));
-            Optc = Computer.readOptionC(list.get(j));
-            Optd = Computer.readOptionD(list.get(j));
-            global = Computer.readAnswer(list.get(j++));
+            try
+            {
+                Ques = Computer.readQuestion(list.get(j));
+                Opta = Computer.readOptionA(list.get(j));
+                Optb = Computer.readOptionB(list.get(j));
+                Optc = Computer.readOptionC(list.get(j));
+                Optd = Computer.readOptionD(list.get(j));
+                global = Computer.readAnswer(list.get(j++));
+            }
+            catch(Exception e)
+            {
+                Intent intent = new Intent(Questions.this, Result.class);
+                intent.putExtra("correct", l);
+                intent.putExtra("attemp", k);
+                startActivity(intent);
+                finish();
+                SharedPreferences.Editor editor = shared.edit();//here we are saving the data when the countdown timer will finish and it is saved in shared prefrence file that is defined in onCreate method as score
+                editor.putInt("Questions", k).commit();
+                if (get.equals("c1") && shared.getInt("Computer", 0) < l)
+                    editor.putInt("Computer", l * 10).apply();
+            }
         }
 
         else if (get.equals("c2"))
         {
             if (c2 == 0) {
-                for (i = 1; i < 25; i++) {
+                for (i = 1; i < 25; i++)
+                {
                     list.add(new Integer(i));
                 }
                 Collections.shuffle(list);
                 c2=1;
             }
-            Ques = Sports.readQuestion(list.get(j));
-            Opta = Sports.readOptionA(list.get(j));
-            Optb = Sports.readOptionB(list.get(j));
-            Optc = Sports.readOptionC(list.get(j));
-            Optd = Sports.readOptionD(list.get(j));
-            global = Sports.readAnswer(list.get(j++));
-
+           try {
+                Ques = Sports.readQuestion(list.get(j));
+                Opta = Sports.readOptionA(list.get(j));
+                Optb = Sports.readOptionB(list.get(j));
+                Optc = Sports.readOptionC(list.get(j));
+                Optd = Sports.readOptionD(list.get(j));
+                global = Sports.readAnswer(list.get(j++));
+            }
+           catch(Exception e)
+            {
+                Intent intent = new Intent(Questions.this, Result.class);
+                intent.putExtra("correct", l);
+                intent.putExtra("attemp", k);
+                startActivity(intent);
+                finish();
+                SharedPreferences.Editor editor = shared.edit();//here we are saving the data when the countdown timer will finish and it is saved in shared prefrence file that is defined in onCreate method as score
+                editor.putInt("Questions", k).commit();
+                if (get.equals("c2") && shared.getInt("Sports", 0) < l)
+                    editor.putInt("Sports", l * 10).apply();
+            }
         }
         else if (get.equals("c3"))
         {
@@ -268,12 +299,28 @@ public class Questions extends AppCompatActivity {
                 Collections.shuffle(list);
                 c3=1;
             }
-            Ques = Inventions.readQuestion(list.get(j));
-            Opta = Inventions.readOptionA(list.get(j));
-            Optb = Inventions.readOptionB(list.get(j));
-            Optc = Inventions.readOptionC(list.get(j));
-            Optd = Inventions.readOptionD(list.get(j));
-            global = Inventions.readAnswer(list.get(j++));
+            try
+            {
+                Ques = Inventions.readQuestion(list.get(j));
+                Opta = Inventions.readOptionA(list.get(j));
+                Optb = Inventions.readOptionB(list.get(j));
+                Optc = Inventions.readOptionC(list.get(j));
+                Optd = Inventions.readOptionD(list.get(j));
+                global = Inventions.readAnswer(list.get(j++));
+            }
+            catch(Exception e)
+            {
+                Intent intent = new Intent(Questions.this, Result.class);
+                intent.putExtra("correct", l);
+                intent.putExtra("attemp", k);
+                startActivity(intent);
+                finish();
+                SharedPreferences.Editor editor = shared.edit();//here we are saving the data when the countdown timer will finish and it is saved in shared prefrence file that is defined in onCreate method as score
+                editor.putInt("Questions", k).commit();
+                if (get.equals("c3") && shared.getInt("Inventions", 0) < l)
+                    editor.putInt("Inventions", l * 10).apply();
+            }
+
         } else if (get.equals("c4")) {
             if (c4 == 0) {
                 for (i = 1; i < 25; i++) {
@@ -282,12 +329,27 @@ public class Questions extends AppCompatActivity {
                 Collections.shuffle(list);
                 c4=1;
             }
-            Ques = General.readQuestion(list.get(j));
-            Opta = General.readOptionA(list.get(j));
-            Optb = General.readOptionB(list.get(j));
-            Optc = General.readOptionC(list.get(j));
-            Optd = General.readOptionD(list.get(j));
-            global = General.readAnswer(list.get(j++));
+            try
+            {
+                Ques = General.readQuestion(list.get(j));
+                Opta = General.readOptionA(list.get(j));
+                Optb = General.readOptionB(list.get(j));
+                Optc = General.readOptionC(list.get(j));
+                Optd = General.readOptionD(list.get(j));
+                global = General.readAnswer(list.get(j++));
+            }
+            catch(Exception e)
+            {
+                Intent intent = new Intent(Questions.this, Result.class);
+                intent.putExtra("correct", l);
+                intent.putExtra("attemp", k);
+                startActivity(intent);
+                finish();
+                SharedPreferences.Editor editor = shared.edit();//here we are saving the data when the countdown timer will finish and it is saved in shared prefrence file that is defined in onCreate method as score
+                editor.putInt("Questions", k).commit();
+                if (get.equals("c4") && shared.getInt("General", 0) < l)
+                    editor.putInt("General", l * 10).apply();
+            }
         } else if (get.equals("c5")) {
             if (c5 == 0) {
                 for (i = 1; i < 30; i++) {
@@ -296,12 +358,25 @@ public class Questions extends AppCompatActivity {
                 Collections.shuffle(list);
                 c5=1;
             }
-            Ques = Science.readQuestion(list.get(j));
-            Opta = Science.readOptionA(list.get(j));
-            Optb = Science.readOptionB(list.get(j));
-            Optc = Science.readOptionC(list.get(j));
-            Optd = Science.readOptionD(list.get(j));
-            global = Science.readAnswer(list.get(j++));
+            try {
+                Ques = Science.readQuestion(list.get(j));
+                Opta = Science.readOptionA(list.get(j));
+                Optb = Science.readOptionB(list.get(j));
+                Optc = Science.readOptionC(list.get(j));
+                Optd = Science.readOptionD(list.get(j));
+                global = Science.readAnswer(list.get(j++));
+            } catch(Exception e)
+            {
+                Intent intent = new Intent(Questions.this, Result.class);
+                intent.putExtra("correct", l);
+                intent.putExtra("attemp", k);
+                startActivity(intent);
+                finish();
+                SharedPreferences.Editor editor = shared.edit();//here we are saving the data when the countdown timer will finish and it is saved in shared prefrence file that is defined in onCreate method as score
+                editor.putInt("Questions", k).commit();
+                if (get.equals("c5") && shared.getInt("Science", 0) < l)
+                    editor.putInt("Science", l * 10).apply();
+            }
         } else if (get.equals("c6")) {
             if (c6 == 0) {
                 for (i = 1; i < 27; i++) {
@@ -310,13 +385,27 @@ public class Questions extends AppCompatActivity {
                 Collections.shuffle(list);
                 c6=1;
             }
-            Ques = English.readQuestion(list.get(j));
-            Opta = English.readOptionA(list.get(j));
-            Optb = English.readOptionB(list.get(j));
-            Optc = English.readOptionC(list.get(j));
-            Optd = English.readOptionD(list.get(j));
-            global = English.readAnswer(list.get(j++));
-
+            try
+            {
+                Ques = English.readQuestion(list.get(j));
+                Opta = English.readOptionA(list.get(j));
+                Optb = English.readOptionB(list.get(j));
+                Optc = English.readOptionC(list.get(j));
+                Optd = English.readOptionD(list.get(j));
+                global = English.readAnswer(list.get(j++));
+            }
+            catch(Exception e)
+            {
+                Intent intent = new Intent(Questions.this, Result.class);
+                intent.putExtra("correct", l);
+                intent.putExtra("attemp", k);
+                startActivity(intent);
+                finish();
+                SharedPreferences.Editor editor = shared.edit();//here we are saving the data when the countdown timer will finish and it is saved in shared prefrence file that is defined in onCreate method as score
+                editor.putInt("Questions", k).commit();
+                if (get.equals("c6") && shared.getInt("English", 0) < l)
+                    editor.putInt("English", l * 10).apply();
+            }
         } else if (get.equals("c7")) {
             if (c7 == 0) {
                 for (i = 1; i < 21; i++) {
@@ -325,12 +414,27 @@ public class Questions extends AppCompatActivity {
                 Collections.shuffle(list);
                 c7=1;
             }
-            Ques = Books.readQuestion(list.get(j));
-            Opta = Books.readOptionA(list.get(j));
-            Optb = Books.readOptionB(list.get(j));
-            Optc = Books.readOptionC(list.get(j));
-            Optd = Books.readOptionD(list.get(j));
-            global = Books.readAnswer(list.get(j++));
+            try
+            {
+                Ques = Books.readQuestion(list.get(j));
+                Opta = Books.readOptionA(list.get(j));
+                Optb = Books.readOptionB(list.get(j));
+                Optc = Books.readOptionC(list.get(j));
+                Optd = Books.readOptionD(list.get(j));
+                global = Books.readAnswer(list.get(j++));
+            }
+            catch(Exception e)
+            {
+                Intent intent = new Intent(Questions.this, Result.class);
+                intent.putExtra("correct", l);
+                intent.putExtra("attemp", k);
+                startActivity(intent);
+                finish();
+                SharedPreferences.Editor editor = shared.edit();//here we are saving the data when the countdown timer will finish and it is saved in shared prefrence file that is defined in onCreate method as score
+                editor.putInt("Questions", k).commit();
+                if (get.equals("c7") && shared.getInt("Books", 0) < l)
+                    editor.putInt("Books", l * 10).apply();
+            }
         } else if (get.equals("c8")) {
             if (c8 == 0) {
                 for (i = 1; i < 26; i++) {
@@ -339,12 +443,26 @@ public class Questions extends AppCompatActivity {
                 Collections.shuffle(list);
                 c8=1;
             }
-            Ques = Maths.readQuestion(list.get(j));
-            Opta = Maths.readOptionA(list.get(j));
-            Optb = Maths.readOptionB(list.get(j));
-            Optc = Maths.readOptionC(list.get(j));
-            Optd = Maths.readOptionD(list.get(j));
-            global = Maths.readAnswer(list.get(j++));
+            try{
+                Ques = Maths.readQuestion(list.get(j));
+                Opta = Maths.readOptionA(list.get(j));
+                Optb = Maths.readOptionB(list.get(j));
+                Optc = Maths.readOptionC(list.get(j));
+                Optd = Maths.readOptionD(list.get(j));
+                global = Maths.readAnswer(list.get(j++));
+            }
+            catch(Exception e)
+            {
+                Intent intent = new Intent(Questions.this, Result.class);
+                intent.putExtra("correct", l);
+                intent.putExtra("attemp", k);
+                startActivity(intent);
+                finish();
+                SharedPreferences.Editor editor = shared.edit();//here we are saving the data when the countdown timer will finish and it is saved in shared prefrence file that is defined in onCreate method as score
+                editor.putInt("Questions", k).commit();
+                if (get.equals("c8") && shared.getInt("Maths", 0) < l)
+                    editor.putInt("Maths", l * 10).apply();
+            }
         } else if (get.equals("c9")) {
             if (c9 == 0) {
                 for (i = 1; i < 90; i++) {
@@ -353,26 +471,55 @@ public class Questions extends AppCompatActivity {
                 Collections.shuffle(list);
                 c9=1;
             }
-            Ques = Capitals.readQuestion(list.get(j));
-            Opta = Capitals.readOptionA(list.get(j));
-            Optb = Capitals.readOptionB(list.get(j));
-            Optc = Capitals.readOptionC(list.get(j));
-            Optd = Capitals.readOptionD(list.get(j));
-            global = Capitals.readAnswer(list.get(j++));
-        } else if (get.equals("c10")) {
+            try {
+                Ques = Capitals.readQuestion(list.get(j));
+                Opta = Capitals.readOptionA(list.get(j));
+                Optb = Capitals.readOptionB(list.get(j));
+                Optc = Capitals.readOptionC(list.get(j));
+                Optd = Capitals.readOptionD(list.get(j));
+                global = Capitals.readAnswer(list.get(j++));
+            }
+            catch(Exception e)
+            {
+                Intent intent = new Intent(Questions.this, Result.class);
+                intent.putExtra("correct", l);
+                intent.putExtra("attemp", k);
+                startActivity(intent);
+                finish();
+                SharedPreferences.Editor editor = shared.edit();//here we are saving the data when the countdown timer will finish and it is saved in shared prefrence file that is defined in onCreate method as score
+                editor.putInt("Questions", k).commit();
+                if (get.equals("c9") && shared.getInt("Capitals", 0) < l)
+                    editor.putInt("Capitals", l * 10).apply();
+            }
+        } else if (get.equals("c10"))
+        {
             if (c10 == 0) {
-                for (i = 1; i < 40; i++) {
+                for (i = 1; i < 40; i++)
+                {
                     list.add(new Integer(i));
                 }
                 Collections.shuffle(list);
                 c10=1;
             }
-            Ques = Currency.readQuestion(list.get(j));
-            Opta = Currency.readOptionA(list.get(j));
-            Optb = Currency.readOptionB(list.get(j));
-            Optc = Currency.readOptionC(list.get(j));
-            Optd = Currency.readOptionD(list.get(j));
-            global = Currency.readAnswer(list.get(j++));
+            try {
+                Ques = Currency.readQuestion(list.get(j));
+                Opta = Currency.readOptionA(list.get(j));
+                Optb = Currency.readOptionB(list.get(j));
+                Optc = Currency.readOptionC(list.get(j));
+                Optd = Currency.readOptionD(list.get(j));
+                global = Currency.readAnswer(list.get(j++));
+            } catch(Exception e)
+            {
+                Intent intent = new Intent(Questions.this, Result.class);
+                intent.putExtra("correct", l);
+                intent.putExtra("attemp", k);
+                startActivity(intent);
+                finish();
+                SharedPreferences.Editor editor = shared.edit();//here we are saving the data when the countdown timer will finish and it is saved in shared prefrence file that is defined in onCreate method as score
+                editor.putInt("Questions", k).commit();
+                if (get.equals("c10") && shared.getInt("Currency", 0) < l)
+                    editor.putInt("Currency", l * 10).apply();
+            }
         }
         ques.setText("" + Ques);
         OptA.setText(Opta);
