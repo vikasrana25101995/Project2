@@ -63,307 +63,307 @@ public class Navigation_Activity extends AppCompatActivity
         } else {
             nav_header_imag.setImageResource(R.drawable.female);
         }
-//        c1 = (Button) findViewById(R.id.b1);
-//        c2 = (Button) findViewById(R.id.b2);
-//        c3 = (Button) findViewById(R.id.b3);
-//        c4 = (Button) findViewById(R.id.b4);
-//        c5 = (Button) findViewById(R.id.b5);
-//        c6 = (Button) findViewById(R.id.b6);
-//        c7 = (Button) findViewById(R.id.b7);
-//        c8 = (Button) findViewById(R.id.b8);
-//        c9 = (Button) findViewById(R.id.b9);
-//        c10 = (Button) findViewById(R.id.b10);
-//
-//
-//        c1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                //To show button click
-//                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
-//
-//
-//                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
-//                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
-//                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
-//                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
-//                progressBar.setProgress(0);//attributes
-//                progressBar.setMax(100);//attributes
-//                progressBar.show();//show the progress bar
-//                //This handler will add a delay of 3 seconds
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        //Intent start to open the navigation drawer activity
-//                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
-//                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
-//                        intent.putExtra(Message, "c1");//by this statement we are sending the name of the button that invoked the new Questions.java activity "Message" is defined by the name of the package + MESSAGE
-//                        startActivity(intent);
-//                    }
-//                }, 2000);
-//            }
-//        });
-//
-//
-//        c2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                //To show button click
-//                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
-//
-//                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
-//                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
-//                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
-//                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
-//                progressBar.setProgress(0);//attributes
-//                progressBar.setMax(100);//attributes
-//                progressBar.show();//show the progress bar
-//                //This handler will add a delay of 3 seconds
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        //Intent start to open the navigation drawer activity
-//                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
-//                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
-//                        intent.putExtra(Message, "c2");
-//                        startActivity(intent);
-//                    }
-//                }, 2000);
-//            }
-//        });
-//
-//
-//        c3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                //To show button click
-//                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
-//
-//                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
-//                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
-//                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
-//                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
-//                progressBar.setProgress(0);//attributes
-//                progressBar.setMax(100);//attributes
-//                progressBar.show();//show the progress bar
-//                //This handler will add a delay of 3 seconds
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        //Intent start to open the navigation drawer activity
-//                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
-//                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
-//                        intent.putExtra(Message, "c3");
-//                        startActivity(intent);
-//                    }
-//                }, 2000);
-//            }
-//        });
-//
-//
-//        c4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                //To show button click
-//                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
-//
-//                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
-//                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
-//                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
-//                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
-//                progressBar.setProgress(0);//attributes
-//                progressBar.setMax(100);//attributes
-//                progressBar.show();//show the progress bar
-//                //This handler will add a delay of 3 seconds
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        //Intent start to open the navigation drawer activity
-//                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
-//                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
-//                        intent.putExtra(Message, "c4");
-//                        startActivity(intent);
-//                    }
-//                }, 2000);
-//            }
-//        });
-//
-//
-//        c5.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                //To show button click
-//                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
-//
-//                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
-//                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
-//                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
-//                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
-//                progressBar.setProgress(0);//attributes
-//                progressBar.setMax(100);//attributes
-//                progressBar.show();//show the progress bar
-//                //This handler will add a delay of 3 seconds
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        //Intent start to open the navigation drawer activity
-//                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
-//                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
-//                        intent.putExtra(Message, "c5");
-//                        startActivity(intent);
-//                    }
-//                }, 2000);
-//            }
-//        });
-//
-//
-//        c6.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                //To show button click
-//                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
-//
-//                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
-//                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
-//                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
-//                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
-//                progressBar.setProgress(0);//attributes
-//                progressBar.setMax(100);//attributes
-//                progressBar.show();//show the progress bar
-//                //This handler will add a delay of 3 seconds
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        //Intent start to open the navigation drawer activity
-//                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
-//                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
-//                        intent.putExtra(Message, "c6");
-//                        startActivity(intent);
-//                    }
-//                }, 2000);
-//            }
-//        });
-//
-//
-//        c7.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                //To show button click
-//                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
-//
-//                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
-//                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
-//                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
-//                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
-//                progressBar.setProgress(0);//attributes
-//                progressBar.setMax(100);//attributes
-//                progressBar.show();//show the progress bar
-//                //This handler will add a delay of 3 seconds
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        //Intent start to open the navigation drawer activity
-//                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
-//                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
-//                        intent.putExtra(Message, "c7");
-//                        startActivity(intent);
-//                    }
-//                }, 2000);
-//            }
-//        });
-//
-//
-//        c8.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                //To show button click
-//                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
-//
-//                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
-//                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
-//                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
-//                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
-//                progressBar.setProgress(0);//attributes
-//                progressBar.setMax(100);//attributes
-//                progressBar.show();//show the progress bar
-//                //This handler will add a delay of 3 seconds
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        //Intent start to open the navigation drawer activity
-//                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
-//                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
-//                        intent.putExtra(Message, "c8");
-//                        startActivity(intent);
-//                    }
-//                }, 2000);
-//            }
-//        });
-//
-//
-//        c9.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                //To show button click
-//                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
-//
-//                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
-//                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
-//                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
-//                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
-//                progressBar.setProgress(0);//attributes
-//                progressBar.setMax(100);//attributes
-//                progressBar.show();//show the progress bar
-//                //This handler will add a delay of 3 seconds
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        //Intent start to open the navigation drawer activity
-//                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
-//                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
-//                        intent.putExtra(Message, "c9");
-//                        startActivity(intent);
-//                    }
-//                }, 2000);
-//            }
-//        });
-//
-//
-//        c10.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                //To show button click
-//                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
-//
-//                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
-//                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
-//                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
-//                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
-//                progressBar.setProgress(0);//attributes
-//                progressBar.setMax(100);//attributes
-//                progressBar.show();//show the progress bar
-//                //This handler will add a delay of 3 seconds
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        //Intent start to open the navigation drawer activity
-//                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
-//                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
-//                        intent.putExtra(Message, "c10");
-//                        startActivity(intent);
-//                    }
-//                }, 2000);
-//            }
-//        });
+        c1 = (Button) findViewById(R.id.b1);
+        c2 = (Button) findViewById(R.id.b2);
+        c3 = (Button) findViewById(R.id.b3);
+        c4 = (Button) findViewById(R.id.b4);
+        c5 = (Button) findViewById(R.id.b5);
+        c6 = (Button) findViewById(R.id.b6);
+        c7 = (Button) findViewById(R.id.b7);
+        c8 = (Button) findViewById(R.id.b8);
+        c9 = (Button) findViewById(R.id.b9);
+        c10 = (Button) findViewById(R.id.b10);
+
+
+        c1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+
+                //To show button click
+                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
+
+                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
+                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
+                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
+                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
+                progressBar.setProgress(0);//attributes
+                progressBar.setMax(100);//attributes
+                progressBar.show();//show the progress bar
+                //This handler will add a delay of 3 seconds
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Intent start to open the navigation drawer activity
+                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
+                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
+                        intent.putExtra(Message, "c1");//by this statement we are sending the name of the button that invoked the new Questions.java activity "Message" is defined by the name of the package + MESSAGE
+                        startActivity(intent);
+                    }
+                }, 2000);
+            }
+        });
+
+
+        c2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //To show button click
+                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
+
+                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
+                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
+                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
+                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
+                progressBar.setProgress(0);//attributes
+                progressBar.setMax(100);//attributes
+                progressBar.show();//show the progress bar
+                //This handler will add a delay of 3 seconds
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Intent start to open the navigation drawer activity
+                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
+                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
+                        intent.putExtra(Message, "c2");
+                        startActivity(intent);
+                    }
+                }, 2000);
+            }
+        });
+
+
+        c3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //To show button click
+                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
+
+                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
+                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
+                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
+                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
+                progressBar.setProgress(0);//attributes
+                progressBar.setMax(100);//attributes
+                progressBar.show();//show the progress bar
+                //This handler will add a delay of 3 seconds
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Intent start to open the navigation drawer activity
+                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
+                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
+                        intent.putExtra(Message, "c3");
+                        startActivity(intent);
+                    }
+                }, 2000);
+            }
+        });
+
+
+        c4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //To show button click
+                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
+
+                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
+                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
+                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
+                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
+                progressBar.setProgress(0);//attributes
+                progressBar.setMax(100);//attributes
+                progressBar.show();//show the progress bar
+                //This handler will add a delay of 3 seconds
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Intent start to open the navigation drawer activity
+                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
+                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
+                        intent.putExtra(Message, "c4");
+                        startActivity(intent);
+                    }
+                }, 2000);
+            }
+        });
+
+
+        c5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //To show button click
+                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
+
+                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
+                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
+                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
+                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
+                progressBar.setProgress(0);//attributes
+                progressBar.setMax(100);//attributes
+                progressBar.show();//show the progress bar
+                //This handler will add a delay of 3 seconds
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Intent start to open the navigation drawer activity
+                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
+                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
+                        intent.putExtra(Message, "c5");
+                        startActivity(intent);
+                    }
+                }, 2000);
+            }
+        });
+
+
+        c6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //To show button click
+                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
+
+                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
+                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
+                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
+                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
+                progressBar.setProgress(0);//attributes
+                progressBar.setMax(100);//attributes
+                progressBar.show();//show the progress bar
+                //This handler will add a delay of 3 seconds
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Intent start to open the navigation drawer activity
+                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
+                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
+                        intent.putExtra(Message, "c6");
+                        startActivity(intent);
+                    }
+                }, 2000);
+            }
+        });
+
+
+        c7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //To show button click
+                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
+
+                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
+                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
+                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
+                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
+                progressBar.setProgress(0);//attributes
+                progressBar.setMax(100);//attributes
+                progressBar.show();//show the progress bar
+                //This handler will add a delay of 3 seconds
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Intent start to open the navigation drawer activity
+                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
+                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
+                        intent.putExtra(Message, "c7");
+                        startActivity(intent);
+                    }
+                }, 2000);
+            }
+        });
+
+
+        c8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //To show button click
+                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
+
+                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
+                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
+                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
+                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
+                progressBar.setProgress(0);//attributes
+                progressBar.setMax(100);//attributes
+                progressBar.show();//show the progress bar
+                //This handler will add a delay of 3 seconds
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Intent start to open the navigation drawer activity
+                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
+                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
+                        intent.putExtra(Message, "c8");
+                        startActivity(intent);
+                    }
+                }, 2000);
+            }
+        });
+
+
+        c9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //To show button click
+                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
+
+                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
+                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
+                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
+                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
+                progressBar.setProgress(0);//attributes
+                progressBar.setMax(100);//attributes
+                progressBar.show();//show the progress bar
+                //This handler will add a delay of 3 seconds
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Intent start to open the navigation drawer activity
+                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
+                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
+                        intent.putExtra(Message, "c9");
+                        startActivity(intent);
+                    }
+                }, 2000);
+            }
+        });
+
+
+        c10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //To show button click
+                new Handler().postDelayed(new Runnable() {@Override public void run(){}}, 400);
+
+                progressBar = new ProgressDialog(v.getContext());//Create new object of progress bar type
+                progressBar.setCancelable(false);//Progress bar cannot be cancelled by pressing any wher on screen
+                progressBar.setMessage("Getting Questions Ready ...");//Title shown in the progress bar
+                progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);//Style of the progress bar
+                progressBar.setProgress(0);//attributes
+                progressBar.setMax(100);//attributes
+                progressBar.show();//show the progress bar
+                //This handler will add a delay of 3 seconds
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Intent start to open the navigation drawer activity
+                        progressBar.cancel();//Progress bar will be cancelled (hide from screen) when this run function will execute after 3.5seconds
+                        Intent intent = new Intent(Navigation_Activity.this, Questions.class);
+                        intent.putExtra(Message, "c10");
+                        startActivity(intent);
+                    }
+                }, 2000);
+            }
+        });
 
     }
 
@@ -381,13 +381,14 @@ public class Navigation_Activity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-//        int id = item.getItemId();
-//
-//        if (id == R.id.nav_scorecard) {
-//            Intent intent = new Intent(this, ScoreCard.class);
-//            startActivity(intent);
-//
-//        } else if (id == R.id.nav_Setting) {
+        int id = item.getItemId();
+
+        if (id == R.id.nav_scorecard) {
+            Intent intent = new Intent(this, ScoreCard.class);
+            startActivity(intent);
+
+        }
+        //else if (id == R.id.nav_Setting) {
 //            /*  startActivity(new Intent(this,Setting.class));*/
 //            startActivity(new Intent(this, Setting_activity.class));
 //
@@ -423,8 +424,8 @@ public class Navigation_Activity extends AppCompatActivity
 //        }
 //
 //
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        drawer.closeDrawer(GravityCompat.START);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
@@ -432,16 +433,13 @@ public class Navigation_Activity extends AppCompatActivity
     protected void onPause() {
         super.onPause();
         SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
-        if (sp.getInt("Sound", 0) == 0)
-            mediaPlayer.pause();
+
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
         SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
-        if (sp.getInt("Sound", 0) == 0)
-            mediaPlayer.start();
     }
 
 }

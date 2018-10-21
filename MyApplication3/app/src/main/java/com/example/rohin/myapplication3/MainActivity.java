@@ -1,21 +1,29 @@
 package com.example.rohin.myapplication3;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.method.PasswordTransformationMethod;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -188,6 +196,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void showHelp(View view) {
+
+        Toast toast_help = new Toast(getApplicationContext());
+        toast_help.setGravity(Gravity.CENTER, 0, 0);
+        toast_help.setDuration(Toast.LENGTH_LONG);
+        LayoutInflater inflater = getLayoutInflater();
+        View appear = inflater.inflate(R.layout.toast_help, (ViewGroup) findViewById(R.id.linear));
+        toast_help.setView(appear);
+        toast_help.show();
+
+    }
+
     //class to show or hide password on button click in main activity
     class showOrHidePassword implements View.OnClickListener {
         @Override
@@ -235,6 +255,65 @@ public class MainActivity extends AppCompatActivity {
             //When nothing is selected
             Toast.makeText(getApplicationContext(), "Please Enter the gender", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void showDialog(View view) {
+        int[][] states = new int[][]{
+                new int[]{android.R.attr.state_pressed}, // pressed
+                new int[]{android.R.attr.state_enabled}
+        };
+
+        int[] colors = new int[]{
+                Color.parseColor("#9B1D20"), // red
+                Color.parseColor("#AAFAC8") //light green
+
+        };
+
+        ColorStateList list = new ColorStateList(states, colors);
+        forget.setTextColor(list);
+
+        AlertDialog.Builder alertDialog;//Create a dialog object
+        alertDialog = new AlertDialog.Builder(MainActivity.this);
+        //EditText to show up in the AlertDialog so that the user can enter the email address
+        final EditText editTextDialog = new EditText(MainActivity.this);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        editTextDialog.setLayoutParams(layoutParams);
+        editTextDialog.setHint("Email");
+        //Adding EditText to Dialog Box
+        alertDialog.setView(editTextDialog);
+        alertDialog.setTitle("Enter Email");
+        final SharedPreferences sharedPreferences = getSharedPreferences("Content_main", Context.MODE_PRIVATE);
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        alertDialog.setPositiveButton("AGREE", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String email_dialog = editTextDialog.getText().toString();
+                if (sharedPreferences.getString("email", Default).equals(email_dialog)) {
+                    //We are setting the values of Prefrences in sharedPrefrences to Default
+                    editor.putString("name", Default);
+                    editor.putString("email", Default);
+                    editor.putString("password", Default);
+                    editor.putString("gender", Default);
+                    editor.commit();
+
+                    //This intent will call the package manager and restart the current activity
+                    Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(i);
+                } else {
+                    Toast.makeText(MainActivity.this, "Enter correct Email Address", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        });
+        alertDialog.setNegativeButton("DISAGREE", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //When the Disagree button is pressed
+            }
+        });
+        //Showing up the alert dialog box
+        alertDialog.show();
     }
 }
 

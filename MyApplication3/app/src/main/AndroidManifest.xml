@@ -26,6 +26,28 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rohin.myapplication3.MainActivity" />
         </activity>
+        <activity
+            android:name=".Questions"
+            android:label="Questions"
+            android:parentActivityName=".Navigation_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rohin.myapplication3.Navigation_Activity" />
+        </activity>
+        <activity
+            android:name=".Result"
+            android:label="Result" />
+        <activity
+            android:name=".ScoreCard"
+            android:label="High Score"
+            android:parentActivityName=".Navigation_Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rohin.myapplication3.Navigation_Activity" />
+        </activity>
     </application>
 
 </manifest>
